@@ -1,0 +1,29 @@
+(import intercambio.*)
+
+(deftemplate ClaseJava (declare (from-class ClaseJava)))
+(deftemplate Baldosa (slot i) (slot j) (slot valor))
+(Mov (slot der))
+
+(defrule RM
+    (ClaseJava (grilla ?g) (movimiento ?mov))
+    =>
+    (assert (Baldosa (i 0) (j 0) (valor (call ?g elementAt 0)))
+        
+;    (eq (call ?g elementAt 0) ()
+;    (call ?g set 2 8)
+;    (call ?g set 3 4)
+;    (call ?g set 14 0)
+;    (call ?g set 15 0)
+;    (modify ?m (movimiento 1))
+;    (printout t "Desde Jess: Se modificó el movimiento a 1" crlf)
+)
+
+(defrule Rultima
+    ?m <- (ClaseJava (grilla ?g) (movimiento ?mov))
+    =>
+    (modify ?m (movimiento 1)))
+
+(defrule R1
+        ?bizq <- (Baldosa (i ?ii) (j ?jj) (Valor ?x)) 
+        (Baldosa (i ?ii) (j ?jj+1) (Valor ?x))
+           

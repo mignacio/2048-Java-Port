@@ -1,0 +1,53 @@
+package nc.player;
+
+import java.util.Random;
+import jess.Rete;
+import nc.Game;
+
+public class JessPlayer extends AbstractPlayer {
+	private boolean primerMov=true;
+	private final Game game;
+	private int[][] grid;
+	private int[][] gridAnt;
+
+	public JessPlayer(Random random, Game game) {
+		super(random);
+		this.game = game;
+	}
+
+	@Override
+	public int getAction() {
+		grid = game.getGrid();
+		int action;
+		for(int i=0; i<4; i++){
+			for(int j=0; j<4; j++){
+				
+				//System.out.print(grid[j][i] + " ");
+			}
+		}
+		//System.out.println();
+		
+		if(primerMov == true){
+			gridAnt = grid;
+			primerMov=false;
+			action = Game.ACTIONS[random.nextInt(Game.ACTIONS.length)];
+		}else{
+			if(gridAnt != grid){
+				action = 0;
+			}else
+				action = 3;
+		}
+		System.out.println(Game.ACTIONS[action]);
+		return action;
+
+	}
+	
+	public int Action(){
+		
+		return 0;
+		
+	}
+	
+}
+
+

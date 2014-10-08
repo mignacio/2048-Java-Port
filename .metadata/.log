@@ -1,0 +1,50 @@
+!SESSION 2014-09-30 13:08:26.158 -----------------------------------------------
+eclipse.buildId=M20080911-1700
+java.version=1.6.0_25
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_ES
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.equinox.p2.ui.sdk 2 0 2014-09-30 13:09:06.470
+!MESSAGE Could not locate the running profile instance. The eclipse.p2.data.area and eclipse.p2.profile properties may not be set correctly in this application's config.ini file.
+!SESSION 2014-09-30 13:15:16.708 -----------------------------------------------
+eclipse.buildId=M20080911-1700
+java.version=1.6.0_25
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_ES
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.equinox.p2.ui.sdk 2 0 2014-09-30 13:15:26.443
+!MESSAGE Could not locate the running profile instance. The eclipse.p2.data.area and eclipse.p2.profile properties may not be set correctly in this application's config.ini file.
+!SESSION 2014-09-30 16:57:20.815 -----------------------------------------------
+eclipse.buildId=M20080911-1700
+java.version=1.6.0_25
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_ES
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data F:\2048
+
+!ENTRY org.eclipse.equinox.p2.ui.sdk 2 0 2014-09-30 16:57:30.692
+!MESSAGE Could not locate the running profile instance. The eclipse.p2.data.area and eclipse.p2.profile properties may not be set correctly in this application's config.ini file.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2014-09-30 16:57:44.272
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2014-09-30 16:57:44.272
+!MESSAGE Conflict for 'org.eclipse.wst.jsdt.ui.edit.text.java.open.editor':
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@741322),
+	expression=AndExpression(org.eclipse.ui.SubActionBars$1@1ad637e,ActivePartExpression(org.eclipse.ui.navigator.CommonNavigator@12a2a50),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@4f0853)),sourcePriority=1064961)
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@741322),
+	expression=AndExpression(org.eclipse.ui.SubActionBars$1@1ad637e,ActivePartExpression(org.eclipse.ui.navigator.CommonNavigator@12a2a50),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@4f0853)),sourcePriority=1064961)
+
+!ENTRY org.eclipse.core.resources 4 567 2014-10-03 09:31:32.362
+!MESSAGE The project description file (.project) for '2048' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+!SESSION 2014-10-03 09:31:43.649 -----------------------------------------------
+eclipse.buildId=M20130204-1200
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Command-line arguments:  -data C:\Users\Nacho\Documents\2048 -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 4 567 2014-10-03 09:31:49.256
+!MESSAGE The project description file (.project) for '2048' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.

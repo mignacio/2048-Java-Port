@@ -1,0 +1,12 @@
+(deftemplate Grilla (declare (from-class ClaseJava)))
+(deftemplate Direccion (slot mov)(slot puntaje))
+
+(assert (Direccion(mov arriba)(puntaje 0)))
+(assert (Direccion(mov abajo)(puntaje 0)))
+(assert (Direccion(mov izquierda)(puntaje 0)))
+(assert (Direccion(mov derecha)(puntaje 0)))
+
+(assert (Baldoza (indice 4 )(valor 2)))
+
+(defrule der
+    ?m <- Grilla(vector ?g))

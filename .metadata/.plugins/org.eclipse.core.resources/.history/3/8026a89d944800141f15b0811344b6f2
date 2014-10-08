@@ -1,0 +1,14 @@
+(import intercambio.*)
+
+(deftemplate ClaseJava (declare (from-class ClaseJava)))
+
+(defrule RM
+    ?m <- (ClaseJava (grilla ?g) (movimiento ?mov))
+    =>
+    (call ?g set 2 8)
+    (call ?g set 3 4)
+    (call ?g set 14 0)
+    (call ?g set 15 0)
+    (modify ?m (movimiento 1))
+    (printout t "Desde Jess: Se modificó el movimiento a 1" crlf)
+)

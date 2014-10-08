@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.ui.workbench.texteditor,3.4.1.r341_v20080827-1100,org.eclipse.ui.edit.text.select.lineStart,1412079187324
+no handler,command,org.eclipse.datatools.sqltools.result,,org.eclipse.datatools.sqltools.result.removeAllInstances,1412079187601
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1412079195210
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1412079222549
+executed,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.file.save,1412079245659
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1412079252264
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1412079254528
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1412079262656
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1412079264027
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1412079285831
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1412079290248
+deactivated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1412079386353
+activated,workbench,org.eclipse.ui.workbench,3.4.1.M20080827-0800a,,1412079389655
+executed,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.edit.delete,1412079394606
+executed,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.edit.delete,1412079575743
+activated,editor,gov.sandia.jess.editor,7.1.0,gov.sandia.jess.editor.JessEditor,1412079712385
+activated,editor,gov.sandia.jess.editor,7.1.0,gov.sandia.jess.editor.JessEditor,1412079717550
+activated,editor,gov.sandia.jess.editor,7.1.0,gov.sandia.jess.editor.JessEditor,1412079794044
+activated,editor,gov.sandia.jess.editor,7.1.0,gov.sandia.jess.editor.JessEditor,1412080004324
+executed,command,org.eclipse.ui,3.4.1.M20080910-0800,org.eclipse.ui.edit.delete,1412080008231
+activated,editor,gov.sandia.jess.editor,7.1.0,gov.sandia.jess.editor.JessEditor,1412080037176
+activated,editor,gov.sandia.jess.editor,7.1.0,gov.sandia.jess.editor.JessEditor,1412080038408
+activated,editor,gov.sandia.jess.editor,7.1.0,gov.sandia.jess.editor.JessEditor,1412080039596
+activated,editor,gov.sandia.jess.editor,7.1.0,gov.sandia.jess.editor.JessEditor,1412080042044
+activated,editor,org.eclipse.jdt.ui,3.4.1.r341_v20080827-1100,org.eclipse.jdt.ui.CompilationUnitEditor,1412080052433

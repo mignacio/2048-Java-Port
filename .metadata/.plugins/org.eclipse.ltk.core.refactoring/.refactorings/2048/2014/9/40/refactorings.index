@@ -1,0 +1,4 @@
+1412077140334	Rename type 'JuanPlayer'
+1412077524916	Rename resource 'JugadorJess'
+1412078119729	Encapsulate field 'grid'
+1412078255007	Encapsulate field 'accion'

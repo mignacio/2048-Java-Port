@@ -1,0 +1,73 @@
+package nc.player;
+
+import java.util.Random;
+import jess.*;
+import nc.Game;
+
+public class JessPlayer extends AbstractPlayer {
+	private boolean primerMov=true;
+	private final Game game;
+	private int[][] grid;
+	private int[][] gridAnt;
+	private Rete motorJ;
+	private Grilla grilla;
+
+	public JessPlayer(Random random, Game game) throws JessException {
+		super(random);
+		this.game = game;
+		grilla = new Grilla();
+		motorJ = new Rete();
+		motorJ.reset();
+		motorJ.batch("inter.clp");
+	}
+
+	@Override
+	public int getAction() {
+		grid = game.getGrid();
+		grilla.setGrid(grid);
+		
+		try {
+			//cargar la matriz al .clp
+			motorJ.add(grilla);
+			
+			//correr .clp
+			motorJ.run();
+		} catch (JessException e) {
+			e.printStackTrace();
+		}
+		
+		//obtener accion
+		
+		return 0;
+
+	}
+	
+	public int Action(){
+		
+		return 0;
+		
+	}
+	
+}
+
+final class Grilla{
+	private int accion;
+	private int[][] grid;
+	public Grilla(){
+		
+	}
+	public void setGrid(int[][] grid) {
+		this.grid = grid;
+	}
+	public int[][] getGrid() {
+		return grid;
+	}
+	public void setAccion(int accion) {
+		this.accion = accion;
+	}
+	public int getAccion() {
+		return accion;
+	}
+}
+
+

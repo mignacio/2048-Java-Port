@@ -19,6 +19,9 @@ import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
+import jess.JessException;
+
+import nc.player.JessPlayer;
 import nc.player.HumanPlayer;
 import nc.player.IDDFSABPlayer;
 import nc.player.Player;
@@ -74,6 +77,8 @@ public final class GUI
             }
         });
         
+
+        
         final JMenuItem noPlayer = new JMenuItem();
         noPlayer.setForeground(DEFAULT_TILE_TEXT_COLORS[0]);
         noPlayer.setText("None");
@@ -83,6 +88,23 @@ public final class GUI
             public final void actionPerformed(final ActionEvent e)
             {
                 game.setPlayer(null);
+            }
+        });
+        
+        final JMenuItem JuanPlayer = new JMenuItem();
+        JuanPlayer.setForeground(DEFAULT_TILE_TEXT_COLORS[0]);
+        JuanPlayer.setText("Jess");
+        JuanPlayer.addActionListener(new ActionListener()
+        {
+            @Override
+            public final void actionPerformed(final ActionEvent e)
+            {
+                try {
+					game.setPlayer(new JessPlayer(game.getRandom(), game));
+				} catch (JessException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
             }
         });
         
@@ -126,6 +148,7 @@ public final class GUI
         player.setForeground(DEFAULT_TILE_TEXT_COLORS[0]);
         player.setText("Player");
         player.add(noPlayer);
+        player.add(JuanPlayer);
         player.add(randomPlayer);
         player.add(humanPlayer);
         player.add(alphaBetaPlayer);
@@ -303,7 +326,7 @@ public final class GUI
     
     public final void update()
     {
-        frame.revalidate();
+        frame.validate();
         frame.repaint();
     }
     

@@ -10,7 +10,7 @@ public final class Game
 {
     public static final int DEFAULT_ROWS = 4;
     public static final int DEFAULT_COLUMNS = 4;
-    public static final int DEFAULT_WINNING_TILE = 2048;
+    public static final int DEFAULT_WINNING_TILE = 4096;
     public static final int[] DEFAULT_TILES = new int[] { 2, 4 };
     public static final double[] DEFAULT_PROBABILITIES = new double[] { 0.9d, 0.1d };
     public static final int EMPTY = 0;
