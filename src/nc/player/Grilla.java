@@ -8,12 +8,12 @@ public class Grilla {
 	private int accion;
 	private Vector<Integer> vector;
 
-	public Vector<Integer> getVectorE() {
+	public Vector<Integer> getVector() {
 		return vector;
 	}
 
-	public void setVectorE(Vector<Integer> vectorE) {
-		this.vector = vectorE;
+	public void setVector(Vector<Integer> vector) {
+		this.vector = vector;
 	}
 
 	public Grilla() {
@@ -28,13 +28,12 @@ public class Grilla {
 		return accion;
 	}
 
-	public Vector<Integer> setVector(int[][] matriz) {
-		for (int i = 0; i < 3; i++) {
-			for (int j = 0; j < 3; j++) {
-				vector.add(matriz[i][j]);
+	public void setVector(int[][] matriz) {
+		for (int j = 0; j <= 3; j++) {
+			for (int i = 0; i <= 3; i++) {
+				vector.add(matriz[j][i]);
 			}
 		}
-		return vector;
 
 	}
 }

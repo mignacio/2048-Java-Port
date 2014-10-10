@@ -1,0 +1,83 @@
+[33mcommit 9950e9b69254346efa289c39550be0b6e01f21d9[m
+Author: Ignacio Moya <moyaignacioj@gmail.com>
+Date:   Wed Oct 8 00:24:17 2014 -0300
+
+    Primer commit, incluye archivos hechos en clase, jessplayer, grilla y Jessica
+
+[33mcommit 559b06ef7cdbe30def9371142951ba219631a9d5[m
+Author: sanitykey <richy.m@hotmail.co.uk>
+Date:   Sun Mar 16 20:18:55 2014 +0000
+
+    Delete QPlayer.class
+
+[33mcommit 2b074b150caa30103be090b1927a01b0db5b3df1[m
+Author: sanitykey <richy.m@hotmail.co.uk>
+Date:   Sun Mar 16 20:18:45 2014 +0000
+
+    Delete S2.class
+
+[33mcommit 32ad851c17522f0944c27174ca7b063ba6d82ea8[m
+Author: sanitykey <richy.m@hotmail.co.uk>
+Date:   Sun Mar 16 20:18:39 2014 +0000
+
+    Delete S1.class
+
+[33mcommit a2d7fd885cef24f1ce5ba5ae10d93f944e9cae90[m
+Author: sanitykey <richy.m@hotmail.co.uk>
+Date:   Sun Mar 16 20:18:33 2014 +0000
+
+    Delete Experiment.class
+
+[33mcommit 1d3b3122b3fc359cb47ea16d913c755872ec3349[m
+Author: sanitykey <richy.m@hotmail.co.uk>
+Date:   Sun Mar 16 20:18:29 2014 +0000
+
+    Delete Experiment$2.class
+
+[33mcommit 2973d0b5b70ff7e88bbd2ddeebc16cdfd99bb300[m
+Author: sanitykey <richy.m@hotmail.co.uk>
+Date:   Sun Mar 16 20:18:24 2014 +0000
+
+    Delete Experiment$1.class
+
+[33mcommit f2823f1550d2c0ce49d733bbd3d22817abbb7016[m
+Author: sanitykey <richy.m@hotmail.co.uk>
+Date:   Sun Mar 16 20:18:06 2014 +0000
+
+    Delete QPlayer.java
+
+[33mcommit 07b68588a447ffcc144c02ddc230e6653d4773ee[m
+Author: sanitykey <richy.m@hotmail.co.uk>
+Date:   Sun Mar 16 20:17:54 2014 +0000
+
+    Delete S2.java
+
+[33mcommit c90a637473a748716e8b8aed66e630a2777582ed[m
+Author: sanitykey <richy.m@hotmail.co.uk>
+Date:   Sun Mar 16 20:17:48 2014 +0000
+
+    Delete S1.java
+
+[33mcommit 0e3b518087aeaf269a4cc005fa77be41a5636256[m
+Author: sanitykey <richy.m@hotmail.co.uk>
+Date:   Sun Mar 16 20:17:41 2014 +0000
+
+    Delete Experiment.java
+
+[33mcommit b8f3e6810da61fa9b4a15c8be04822a0cfa680a7[m
+Author: sanitykey <richy.m@hotmail.co.uk>
+Date:   Sun Mar 16 20:03:50 2014 +0000
+
+    Create LICENSE
+
+[33mcommit a60b27f97dc01066b166d246d85e583424c849a0[m
+Author: sanitykey <richy.m@hotmail.co.uk>
+Date:   Sun Mar 16 20:01:12 2014 +0000
+
+    Create README.md
+
+[33mcommit ba5a2746cd8b5941a57291f1df71968b52ed9f6c[m
+Author: unknown <richy.m@hotmail.co.uk>
+Date:   Sun Mar 16 19:52:13 2014 +0000
+
+    Initial commit

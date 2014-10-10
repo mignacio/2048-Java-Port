@@ -4,12 +4,20 @@
 (deftemplate Grilla (declare (from-class Grilla)))
 (deftemplate Baldosa (slot i) (slot j) (slot valor))
 (deftemplate Mov (slot dir)(slot puntaje))
+(deftemplate Estrategia (slot valor))
+
+(assert (Estrategia (valor 0)))
+;valor=0, el programa trata de crear una baldoza con el mayor puntaje posible
+;valor=1, el programa intenta liberar baldozas, suma puntaje en base a que dirección tiene la mayor cantidad de fusiones posibles
 (assert (Mov (dir Derecha)))
 (assert (Mov (dir Abajo)))
+(assert (Mov (dir Arriba)))
+(assert (Mov (dir Izquierda)))
 
 
 (defrule ReglaMayor
-    ?m <- (Grilla (vectorE ?g) (accion ?mov))
+    (declare (salience 1))
+    ?m <- (Grilla (vector ?g) (accion ?mov))
     =>
     
     (assert (Baldosa (i 0) (j 0) (valor (call ?g elementAt 0))))
@@ -31,50 +39,62 @@
     
     )
 
-; ?jj&:(< ?jj 3) la regla se dispara para una baldosa con la coordenada jj y si esta también es menor a 3
 
+
+;estas reglas chequean si una baldoza tiene otra del mismo valor adyacente a ella
+;en las 4 direcciones y suman puntaje a cada mov acorde
 (defrule AdyDer
-    (Baldosa (i ?ii)(j ?jj&:(< ?jj  3))(valor ?v))
+    ;(Estrategia (valor 0))
+    (Baldosa (i ?ii&:(< ?jj  3))(j ?jj)(valor ?v))
     (Baldosa (i =(+ ?ii  1))(j ?jj)(valor =(?v)))
-        =>
-        ;suma puntaje a Der
-        (printout t "Sumo a derecha" crlf)
-        )
-    
-    (defrule AdyAbj
-        (Baldosa (i ?ii)(j ?jj&:(< ?jj 3))(valor ?v))
-        (Baldosa (i ?ii)(j =(+ ?jj 1))(valor =(?v)))
-        =>
-        ;suma puntaje a Abj
-        (printout t "Sumo a abj" crlf)
-        
-        )
-    
-    (defrule AdyArr
-        (Baldosa (i ?ii)(j ?jj&:(> ?jj 0))(valor ?v))
-        (Baldosa (i ?ii)(j ?jj&:(- ?jj 1))(valor =(?v)))
-        =>
-        ;suma puntaje a Izq
-        (printout t "Sumo a izq" crlf)
-        
-        )
-    
-    (defrule AdyIzq
-        (Baldosa (i ?ii&:(> ?ii 0))(j ?jj)(valor ?v))
-        (Baldosa (i ?ii&:(- ?ii 1))(j ?jj)(valor ?v))
-        =>
-        ;suma puntaje a Arr
-        (printout t "Sumo a arr" crlf)
-        
-        )
+    ?dir <- (Mov (dir Derecha))
+    =>
+    ;suma puntaje a Der
+    (modify ?dir (puntaje (+ ?dir.puntaje (* ?v 2))))
+    (printout t "Sumo a derecha" crlf)
+    )
 
-(defrule ReglaMenor 
+(defrule AdyAbj
+    ;(Estrategia (valor 0))
+    (Baldosa (i ?ii)(j ?jj&:(< ?jj 3))(valor ?v))
+    (Baldosa (i ?ii)(j =(+ ?jj 1))(valor =(?v)))
+    ?dir <- (Mov (dir Abajo))
+    =>
+    ;suma puntaje a Abj
+    (modify ?dir (puntaje (+ ?dir.puntaje (* ?v 2))))
+    (printout t "Sumo a abj" crlf)
+    
+    )
+
+(defrule AdyArr
+    ;(Estrategia (valor 0))
+    (Baldosa (i ?ii)(j ?jj&:(> ?jj 0))(valor ?v))
+    (Baldosa (i ?ii)(j =(- ?jj 1))(valor =(?v)))
+    ?dir <- (Mov (dir Arriba))
+    =>
+    ;suma puntaje a Izq
+    (modify ?dir (puntaje (+ ?dir.puntaje (* ?v 2))))
+    (printout t "Sumo a izq" crlf)
+    
+    )
+
+(defrule AdyIzq
+    (Estrategia (valor 0))
+    (Baldosa (i ?ii&:(> ?ii 0))(j ?jj)(valor ?v))
+    (Baldosa (i =(- ?ii 1))(j ?jj)(valor ?v))
+    ?dir <- (Mov (dir Izquierda))
+    =>
+    ;suma puntaje a Arr
+    (modify ?dir (puntaje (+ ?dir.puntaje (* ?v 2))))
+    (printout t "Sumo a arr" crlf)
+    
+    )
+
+(defrule ReglaMenor
     (declare (salience -1))
-    ?m <- (Grilla (vectorE ?g) (accion ?mov))
+    ?m <- (Grilla (vector ?g) (accion ?mov))
     =>
     (printout t "Presione una tecla para continuar")
     (readline t)
-       
+    
     )
-    
-    

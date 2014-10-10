@@ -2,6 +2,7 @@
 
 package nc.player;
 
+import java.io.IOException;
 import java.util.Random;
 import jess.*;
 import nc.Game;
@@ -28,6 +29,7 @@ public class JessPlayer extends AbstractPlayer {
 		grid = game.getGrid();
 		
 		grilla.setVector(grid);
+		
 		try {
 			//resetea el motor Jess
 			motorJ.reset();
@@ -41,17 +43,19 @@ public class JessPlayer extends AbstractPlayer {
 			e.printStackTrace();
 		}
 		
+		try {
+			System.in.read();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		//obtener accion
 		accion = grilla.getAccion();
 		return accion;
 
 	}
-	
-	public int Action(){
-		
-		return 0;
-		
-	}
+
 	
 }
 
