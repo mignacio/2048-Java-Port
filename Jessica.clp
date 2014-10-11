@@ -60,42 +60,43 @@
     =>
     ;suma puntaje a Der
     ;(modify ?dir (puntaje (+ ?dir.puntaje (* ?v1 2))))
-    (printout t "Sumo a derecha" crlf)
+    (printout t "Sumo a Der" crlf)
     )
 
 (defrule AdyAbj
     ;(Estrategia (valor 0))
     (Baldosa (i ?i1)(j ?j1&:(< ?j1 3))(valor ?v1&:(neq ?v1 0)))
-    (Baldosa (i ?i1)(j ?j2&:(eq ?j2 (+ ?j1 1)))(valor ?v2&:(eq ?v2 ?v1)))
+    (Baldosa (i ?i1)(j =(+ ?j1 1))(valor ?v2&:(eq ?v2 ?v1)))
     ;?dir <- (Mov (dir Abajo))
     =>
     ;suma puntaje a Abj
     ;(modify ?dir (puntaje (+ ?dir.puntaje (* ?v1 2))))
-    (printout t "Sumo a abj" crlf)
+    (printout t "Sumo a Abj" crlf)
     
     )
 
 (defrule AdyArr
     ;(Estrategia (valor 0))
+    ?dir <- (Mov (dir Arriba))
     (Baldosa (i ?i1)(j ?j1&:(> ?j1 0))(valor ?v1&:(neq ?v1 0)))
-    (Baldosa (i ?i1)(j ?j2&:(eq ?j2 (+ ?j1 1)))(valor ?v2&:(eq ?v2 ?v1)))
-    ;?dir <- (Mov (dir Arriba))
+    (Baldosa (i ?i1)(j =(- ?j1 1))(valor ?v2&:(eq ?v2 ?v1)))
+    
     =>
     ;suma puntaje a Izq
     ;(modify ?dir (puntaje (+ ?dir.puntaje (* ?v1 2))))
-    (printout t "Sumo a izq" crlf)
+    (printout t "Sumo a Arr" crlf)
     
     )
 
 (defrule AdyIzq
     ;(Estrategia (valor 0))
     (Baldosa (i ?i1&:(> ?i1 0))(j ?j1)(valor ?v1&:(neq ?v1 0)))
-    (Baldosa (i ?i2&:(eq ?i2 (- ?i1 1)))(j ?j1)(valor ?v2&:(eq ?v2 ?v1)))
+    (Baldosa (i =(- ?i1 1))(j ?j1)(valor ?v2&:(eq ?v2 ?v1)))
     ;?dir <- (Mov (dir Izquierda))
     =>
     ;suma puntaje a Arr
     ;(modify ?dir (puntaje (+ ?dir.puntaje (* ?v1 2))))
-    (printout t "Sumo a arr" crlf)
+    (printout t "Sumo a Izq" crlf)
     
     )
 
