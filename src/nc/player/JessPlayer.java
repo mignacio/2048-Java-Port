@@ -9,7 +9,7 @@ import nc.Game;
 
 public class JessPlayer extends AbstractPlayer {
 	private final Game game;
-	private int[][] grid;
+	//private int[][] grid;
 
 	private Rete motorJ;
 	private Grilla grilla;
@@ -26,19 +26,21 @@ public class JessPlayer extends AbstractPlayer {
 
 	@Override
 	public int getAction() {
-		grid = game.getGrid();
 		
-		grilla.setVector(grid);
+		grilla.setVector(game.getGrid());
 		
 		try {
 			//resetea el motor Jess
-			motorJ.reset();
-			
+			motorJ.reset();	
 			//cargar la matriz al .clp
 			motorJ.add(grilla);
 			
 			//correr .clp
 			motorJ.run();
+			
+							
+			
+			
 		} catch (JessException e) {
 			e.printStackTrace();
 		}
