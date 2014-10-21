@@ -31,11 +31,9 @@ public class Grilla {
 	public void setVector(int[][] matriz) {
 		for (int j = 0; j <= 3; j++) {
 			for (int i = 0; i <= 3; i++) {
-				vector.insertElementAt(matriz[j][i], (i+(4*j)));
+				vector.insertElementAt(matriz[j][i], (i + (4 * j)));
 			}
 		}
 
 	}
 }
-
-

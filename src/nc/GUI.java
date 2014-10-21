@@ -93,7 +93,7 @@ public final class GUI
         
         final JMenuItem JuanPlayer = new JMenuItem();
         JuanPlayer.setForeground(DEFAULT_TILE_TEXT_COLORS[0]);
-        JuanPlayer.setText("Jess");
+        JuanPlayer.setText("Jessica");
         JuanPlayer.addActionListener(new ActionListener()
         {
             @Override

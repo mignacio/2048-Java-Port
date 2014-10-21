@@ -9,7 +9,7 @@ import nc.Game;
 
 public class JessPlayer extends AbstractPlayer {
 	private final Game game;
-	//private int[][] grid;
+	// private int[][] grid;
 
 	private Rete motorJ;
 	private Grilla grilla;
@@ -26,40 +26,33 @@ public class JessPlayer extends AbstractPlayer {
 
 	@Override
 	public int getAction() {
-		
+
 		grilla.setVector(game.getGrid());
-		
+
 		try {
-			//resetea el motor Jess
-			motorJ.reset();	
-			//cargar la matriz al .clp
+			// resetea el motor Jess
+			motorJ.reset();
+			// cargar la matriz al .clp
 			motorJ.add(grilla);
-			
-			//correr .clp
+
+			// correr .clp
 			motorJ.run();
-			
-							
-			
-			
+
 		} catch (JessException e) {
 			e.printStackTrace();
 		}
-		
+
 		try {
 			System.in.read();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		//obtener accion
+
+		// obtener accion
 		accion = grilla.getAccion();
 		return accion;
 
 	}
 
-	
 }
-
-
-
